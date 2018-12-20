@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="revealjs/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="revealjs/css/theme/white.css" id="theme">
+<link rel="stylesheet" href="markdownrevealstyle/custom.css">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'revealjs/css/print/pdf.css' : 'revealjs/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="revealjs/lib/js/html5shiv.js"></script>
+  <![endif]-->
+
+<script src="//twemoji.maxcdn.com/2/twemoji.min.js?2.4"></script>
+<script>
+  function addEvent(element, eventName, fn) {
+    if (element.addEventListener)
+      element.addEventListener(eventName, fn, false);
+    else if (element.attachEvent)
+      element.attachEvent('on' + eventName, fn);
+  }
+
+  addEvent(window, 'load', function() {
+    twemoji.parse(document.body, {'folder': 'svg', 'ext': '.svg'});
+  });
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="section" class="slide level2">
+<h1><br />
+</h1>
+<figure>
+<img src="./figures/logo.svg" style="width:90.0%" />
+</figure>
+<p>Slides: <a href="https://daniel-at-github.github.io/lightning_loguru/" class="uri">https://daniel-at-github.github.io/lightning_loguru/</a></p>
+</section>
+<section id="install" class="slide level2">
+<h1>Install</h1>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">pipenv</span> shell
+<span class="kw">pipenv</span> install loguru</code></pre></div>
+</section>
+<section id="usage" class="slide level2">
+<h1>Usage</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> loguru <span class="im">import</span> logger
+logger.debug(<span class="st">&quot;Hello Python Vigo&quot;</span>)</code></pre></div>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.body_foreground > .bold,.bold > .body_foreground, body.body_foreground > pre > .bold { color: #FFFFFF; font-weight: normal; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+.ansi36 { color: #00aaaa; }
+</style>
+<pre class="ansi2html-content">
+<span class="ansi32">2018-12-20 15:13:28.412</span> | <span class="ansi34"></span><span class="ansi1 ansi34">DEBUG   </span> | <span class="ansi36">__main__</span>:<span class="ansi36">&lt;module&gt;</span>:<span class="ansi36">3</span> - <span class="ansi34"></span><span class="ansi1 ansi34">Hello Python Vigo</span>
+</pre>
+</section>
+<section id="custom-formats" class="slide level2">
+<h1>Custom formats</h1>
+<p>You could replace de default sink with a custom format</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> loguru <span class="im">import</span> logger
+<span class="im">import</span> sys
+logger.remove()
+logger.add(sys.stderr,
+           <span class="bu">format</span><span class="op">=</span><span class="st">&quot;</span><span class="sc">{time}</span><span class="st"> </span><span class="sc">{level}</span><span class="st"> </span><span class="sc">{message}</span><span class="st">&quot;</span>,
+           <span class="bu">filter</span><span class="op">=</span><span class="va">None</span>,
+           level<span class="op">=</span><span class="st">&quot;DEBUG&quot;</span>)
+logger.success(<span class="st">&quot;Another example deployed&quot;</span>)</code></pre></div>
+<pre><code>2018-12-20T15:50:56.536470+0100 SUCCESS Another example deployed</code></pre>
+</section>
+<section id="levels" class="slide level2">
+<h1>Levels</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> loguru <span class="im">import</span> logger
+<span class="im">import</span> sys
+logger.remove()
+logger.add(sys.stderr, level<span class="op">=</span><span class="st">&quot;TRACE&quot;</span>,
+           <span class="bu">format</span><span class="op">=</span><span class="st">&#39;&lt;level&gt;</span><span class="sc">{level: &lt;8}</span><span class="st">&lt;/level&gt; &#39;</span>
+                  <span class="co">&#39;=&gt; &lt;level&gt;{message}&lt;/level&gt;&#39;</span>)
+logger.trace(<span class="st">&quot;log data&quot;</span>)
+logger.debug(<span class="st">&quot;log data&quot;</span>)
+logger.info(<span class="st">&quot;log data&quot;</span>)
+logger.success(<span class="st">&quot;log data&quot;</span>)
+logger.warning(<span class="st">&quot;log data&quot;</span>)
+logger.error(<span class="st">&quot;log data&quot;</span>)
+logger.critical(<span class="st">&quot;log data&quot;</span>)</code></pre></div>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.body_foreground > .bold,.bold > .body_foreground, body.body_foreground > pre > .bold { color: #FFFFFF; font-weight: normal; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
+.ansi32 { color: #00aa00; }
+.ansi33 { color: #aa5500; }
+.ansi34 { color: #0000aa; }
+.ansi36 { color: #00aaaa; }
+.ansi41 { background-color: #aa0000; }
+</style>
+<pre class="ansi2html-content">
+<span class="ansi36"></span><span class="ansi1 ansi36">TRACE   </span> =&gt; <span class="ansi36"></span><span class="ansi1 ansi36">log data</span>
+<span class="ansi34"></span><span class="ansi1 ansi34">DEBUG   </span> =&gt; <span class="ansi34"></span><span class="ansi1 ansi34">log data</span>
+<span class="ansi1">INFO    </span> =&gt; <span class="ansi1">log data</span>
+<span class="ansi32"></span><span class="ansi1 ansi32">SUCCESS </span> =&gt; <span class="ansi32"></span><span class="ansi1 ansi32">log data</span>
+<span class="ansi33"></span><span class="ansi1 ansi33">WARNING </span> =&gt; <span class="ansi33"></span><span class="ansi1 ansi33">log data</span>
+<span class="ansi31"></span><span class="ansi1 ansi31">ERROR   </span> =&gt; <span class="ansi31"></span><span class="ansi1 ansi31">log data</span>
+<span class="ansi41"></span><span class="ansi1 ansi41">CRITICAL</span> =&gt; <span class="ansi41"></span><span class="ansi1 ansi41">log data</span>
+</pre>
+</section>
+<section id="file-logging" class="slide level2">
+<h1>File logging</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># File timestamp</span>
+logger.add(<span class="st">&quot;file_</span><span class="sc">{time}</span><span class="st">.log&quot;</span>)
+<span class="co"># Rotation by size, once a day or at X days</span>
+logger.add(<span class="st">&quot;file_1.log&quot;</span>, rotation<span class="op">=</span><span class="st">&quot;500 MB&quot;</span>)    <span class="co"># too big</span>
+logger.add(<span class="st">&quot;file_2.log&quot;</span>, rotation<span class="op">=</span><span class="st">&quot;12:00&quot;</span>)     <span class="co"># at noon</span>
+logger.add(<span class="st">&quot;file_3.log&quot;</span>, rotation<span class="op">=</span><span class="st">&quot;1 week&quot;</span>)    <span class="co"># after a week</span>
+<span class="co"># Cleanup by time</span>
+logger.add(<span class="st">&quot;file_X.log&quot;</span>, retention<span class="op">=</span><span class="st">&quot;10 days&quot;</span>)
+<span class="co"># Compress to save space</span>
+logger.add(<span class="st">&quot;file_Y.log&quot;</span>, compression<span class="op">=</span><span class="st">&quot;zip&quot;</span>)</code></pre></div>
+</section>
+<section id="string-formatting-using-braces" class="slide level2">
+<h1>String formatting using braces</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">logger.success(<span class="st">&quot;If you&#39;re using Python {}, better with </span><span class="sc">{feature}</span><span class="st">&quot;</span>,
+               <span class="fl">3.6</span>,
+               feature<span class="op">=</span><span class="st">&quot;f-strings&quot;</span>)</code></pre></div>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.body_foreground > .bold,.bold > .body_foreground, body.body_foreground > pre > .bold { color: #FFFFFF; font-weight: normal; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+<pre class="ansi2html-content">
+<span class="ansi32"></span><span class="ansi1 ansi32">SUCCESS </span> =&gt; <span class="ansi32"></span><span class="ansi1 ansi32">If you're using Python 3.6, better f-strings</span>
+
+</pre>
+</section>
+<section id="asynchronous-logs" class="slide level2">
+<h1>Asynchronous logs</h1>
+<p>Asynchronous, Thread-safe, Multiprocess-safe</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">logger.add(<span class="st">&quot;somefile.log&quot;</span>, enqueue<span class="op">=</span><span class="va">True</span>)</code></pre></div>
+</section>
+<section id="exceptions" class="slide level2">
+<h1>Exceptions</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> loguru <span class="im">import</span> logger
+
+<span class="at">@logger.catch</span>
+<span class="kw">def</span> my_function(x, y, z):
+    <span class="co"># An error? It&#39;s catched anyway!</span>
+    <span class="cf">return</span> <span class="dv">1</span> <span class="op">/</span> (x <span class="op">+</span> y <span class="op">-</span> z)
+
+my_function(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</code></pre></div>
+</section>
+<section id="exceptions-1" class="slide level2">
+<h1>Exceptions</h1>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.body_foreground > .bold,.bold > .body_foreground, body.body_foreground > pre > .bold { color: #FFFFFF; font-weight: normal; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
+.ansi32 { color: #00aa00; }
+.ansi33 { color: #aa5500; }
+.ansi35 { color: #E850A8; }
+.ansi36 { color: #00aaaa; }
+.ansi38-15 { color: #ffffff; }
+.ansi38-197 { color: #d2002a; }
+.ansi38-141 { color: #7e54d2; }
+.ansi38-81 { color: #2aa8d2; }
+</style>
+<pre class="ansi2html-content">
+<span class="ansi32">2018-12-20 16:38:37.569</span> | <span class="ansi31"></span><span class="ansi1 ansi31">ERROR   </span> | <span class="ansi36">__main__</span>:<span class="ansi36">&lt;module&gt;</span>:<span class="ansi36">9</span> - <span class="ansi31"></span><span class="ansi1 ansi31">An error has been caught in function '&lt;module&gt;', process 'MainProcess' (8465), thread 'MainThread' (140530453767936):</span>
+<span class="ansi33"></span><span class="ansi1 ansi33">Traceback (most recent call last):</span><span class="ansi33"></span>
+
+&gt; File "<span class="ansi32"></span><span class="ansi1 ansi32">example.py</span><span class="ansi32"></span>", line <span class="ansi33">9</span>, in <span class="ansi35">&lt;module&gt;</span>
+<span class="ansi38-15">    </span><span class="ansi38-15">my_function</span><span class="ansi38-15">(</span><span class="ansi38-141">1</span><span class="ansi38-15">,</span><span class="ansi38-15"> </span><span class="ansi38-141">2</span><span class="ansi38-15">,</span><span class="ansi38-15"> </span><span class="ansi38-141">3</span><span class="ansi38-15">)</span>
+    <span class="ansi36">└ </span><span class="ansi1 ansi36">&lt;function my_function at 0x7fcfc9725268&gt;</span><span class="ansi36"></span>
+
+  File "<span class="ansi32"></span><span class="ansi1 ansi32">example.py</span><span class="ansi32"></span>", line <span class="ansi33">7</span>, in <span class="ansi35">my_function</span>
+<span class="ansi38-15">    </span><span class="ansi38-81">return</span><span class="ansi38-15"> </span><span class="ansi38-141">1</span><span class="ansi38-15"> </span><span class="ansi38-197">/</span><span class="ansi38-15"> </span><span class="ansi38-15">(</span><span class="ansi38-15">x</span><span class="ansi38-15"> </span><span class="ansi38-197">+</span><span class="ansi38-15"> </span><span class="ansi38-15">y</span><span class="ansi38-15"> </span><span class="ansi38-197">-</span><span class="ansi38-15"> </span><span class="ansi38-15">z</span><span class="ansi38-15">)</span>
+    <span class="ansi36">            │   │   └ </span><span class="ansi1 ansi36">3</span><span class="ansi36"></span>
+    <span class="ansi36">            │   └ </span><span class="ansi1 ansi36">2</span><span class="ansi36"></span>
+    <span class="ansi36">            └ </span><span class="ansi1 ansi36">1</span><span class="ansi36"></span>
+
+<span class="ansi31"></span><span class="ansi1 ansi31">ZeroDivisionError</span><span class="ansi31"></span>:<span class="ansi1"> division by zero
+</span>
+</pre>
+</section>
+<section id="structured-logging" class="slide level2">
+<h1>Structured logging</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> loguru <span class="im">import</span> logger
+logger.add(<span class="st">&quot;log.json&quot;</span>,
+           serialize<span class="op">=</span><span class="va">True</span>,
+           level<span class="op">=</span><span class="st">&quot;DEBUG&quot;</span>)
+logger.success(<span class="st">&quot;Mechanized!!&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span><span class="dt">&quot;record&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;Mechanized!!&quot;</span><span class="fu">,</span> <span class="dt">&quot;line&quot;</span><span class="fu">:</span> <span class="dv">5</span><span class="fu">,</span> <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;__main__&quot;</span><span class="fu">,</span> <span class="dt">&quot;level&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;icon&quot;</span><span class="fu">:</span> <span class="st">&quot;</span><span class="ch">\u2714\ufe0f</span><span class="st">&quot;</span><span class="fu">,</span> <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;SUCCESS&quot;</span><span class="fu">,</span> <span class="dt">&quot;no&quot;</span><span class="fu">:</span> <span class="dv">25</span><span class="fu">},</span> <span class="dt">&quot;function&quot;</span><span class="fu">:</span> <span class="st">&quot;&lt;module&gt;&quot;</span><span class="fu">,</span> <span class="dt">&quot;file&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;path&quot;</span><span class="fu">:</span> <span class="st">&quot;example.py&quot;</span><span class="fu">,</span> <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;example.py&quot;</span><span class="fu">},</span> <span class="dt">&quot;module&quot;</span><span class="fu">:</span> <span class="st">&quot;example&quot;</span><span class="fu">,</span> <span class="dt">&quot;elapsed&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;repr&quot;</span><span class="fu">:</span> <span class="st">&quot;0:00:00.001335&quot;</span><span class="fu">,</span> <span class="dt">&quot;seconds&quot;</span><span class="fu">:</span> <span class="fl">0.001335</span><span class="fu">},</span> <span class="dt">&quot;time&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;repr&quot;</span><span class="fu">:</span> <span class="st">&quot;2018-12-20 17:49:29.347426+01:00&quot;</span><span class="fu">,</span> <span class="dt">&quot;timestamp&quot;</span><span class="fu">:</span> <span class="fl">1545324569.347426</span><span class="fu">},</span> <span class="dt">&quot;extra&quot;</span><span class="fu">:</span> <span class="fu">{},</span> <span class="dt">&quot;thread&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;MainThread&quot;</span><span class="fu">,</span> <span class="dt">&quot;id&quot;</span><span class="fu">:</span> <span class="dv">140491034552064</span><span class="fu">},</span> <span class="dt">&quot;exception&quot;</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span> <span class="dt">&quot;process&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;MainProcess&quot;</span><span class="fu">,</span> <span class="dt">&quot;id&quot;</span><span class="fu">:</span> <span class="dv">9793</span><span class="fu">}},</span> <span class="dt">&quot;text&quot;</span><span class="fu">:</span> <span class="st">&quot;2018-12-20 17:49:29.347 | SUCCESS  | __main__:&lt;module&gt;:5 - Mechanized!!</span><span class="ch">\n</span><span class="st">&quot;</span><span class="fu">}</span></code></pre></div>
+</section>
+<section id="structured-logging-1" class="slide level2">
+<h1>Structured logging</h1>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
+  <span class="dt">&quot;record&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+    <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;Mechanized!!&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;line&quot;</span><span class="fu">:</span> <span class="dv">5</span><span class="fu">,</span>
+    <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;__main__&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;level&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+      <span class="dt">&quot;icon&quot;</span><span class="fu">:</span> <span class="st">&quot;</span><span class="ch">\u2714\ufe0f</span><span class="st">️&quot;</span><span class="fu">,</span>
+      <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;SUCCESS&quot;</span><span class="fu">,</span>
+      <span class="dt">&quot;no&quot;</span><span class="fu">:</span> <span class="dv">25</span>
+    <span class="fu">},</span>
+    <span class="dt">&quot;function&quot;</span><span class="fu">:</span> <span class="st">&quot;&lt;module&gt;&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;file&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+      <span class="dt">&quot;path&quot;</span><span class="fu">:</span> <span class="st">&quot;example.py&quot;</span><span class="fu">,</span>
+      <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;example.py&quot;</span>
+    <span class="fu">},</span>
+    <span class="dt">&quot;module&quot;</span><span class="fu">:</span> <span class="st">&quot;example&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;elapsed&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+      <span class="dt">&quot;repr&quot;</span><span class="fu">:</span> <span class="st">&quot;0:00:00.001335&quot;</span><span class="fu">,</span>
+      <span class="dt">&quot;seconds&quot;</span><span class="fu">:</span> <span class="fl">0.001335</span>
+    <span class="fu">},</span>
+    <span class="dt">&quot;time&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+      <span class="dt">&quot;repr&quot;</span><span class="fu">:</span> <span class="st">&quot;2018-12-20 17:49:29.347426+01:00&quot;</span><span class="fu">,</span>
+      <span class="dt">&quot;timestamp&quot;</span><span class="fu">:</span> <span class="fl">1545324569.347426</span>
+    <span class="fu">},</span>
+    <span class="dt">&quot;extra&quot;</span><span class="fu">:</span> <span class="fu">{},</span>
+    <span class="dt">&quot;thread&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+      <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;MainThread&quot;</span><span class="fu">,</span>
+      <span class="dt">&quot;id&quot;</span><span class="fu">:</span> <span class="dv">140491034552064</span>
+    <span class="fu">},</span>
+    <span class="dt">&quot;exception&quot;</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span>
+    <span class="dt">&quot;process&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+      <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;MainProcess&quot;</span><span class="fu">,</span>
+      <span class="dt">&quot;id&quot;</span><span class="fu">:</span> <span class="dv">9793</span>
+    <span class="fu">}</span>
+  <span class="fu">},</span>
+  <span class="dt">&quot;text&quot;</span><span class="fu">:</span> <span class="st">&quot;2018-12-20 17:49:29.347 | SUCCESS  | __main__:&lt;module&gt;:5 - Mechanized!!</span><span class="ch">\n</span><span class="st">&quot;</span>
+<span class="fu">}</span></code></pre></div>
+</section>
+<section id="and-much-more" class="slide level2">
+<h1>and much more</h1>
+<ul>
+<li>Lazy evaluation of expensive functions</li>
+<li>Customizable levels</li>
+<li>Better datetime handling</li>
+<li>Suitable for scripts and libraries</li>
+<li>Entirely compatible with standard logging</li>
+<li>Personalizable defaults through environment variables</li>
+<li>Convenient parser</li>
+<li>Exhaustive notifier</li>
+</ul>
+</section>
+<section id="credits" class="slide level2">
+<h1>Credits</h1>
+<p><strong>Python packages</strong><br />
+<a href="https://pypi.org/project/loguru/"><strong>loguru</strong></a><br />
+<a href="https://pypi.org/project/ansi2html/"><strong>ansi2html</strong></a> - capturing terminal log colors<br />
+<a href="https://pypi.org/project/markdownreveal/"><strong>markdownreveal</strong></a> - slides<br />
+<strong>Github</strong><br />
+<a href="https://daniel-at-github.github.io/lightning_loguru/" class="uri">https://daniel-at-github.github.io/lightning_loguru/</a></p>
+</section>
+    </div>
+  </div>
+
+  <script src="revealjs/lib/js/head.min.js"></script>
+  <script src="revealjs/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        slideNumber: false,
+        // Push each slide change to the browser history
+        history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'revealjs/plugin/zoom-js/zoom.js', async: true },
+          { src: 'revealjs/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
